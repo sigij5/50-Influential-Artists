@@ -284,11 +284,25 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
+function addArtist(array){
+  let newArtist = {}
 
-    /* Code here */
+    newArtist.id = array[0]
+    newArtist.name = array[1]
+    newArtist.years = array[2]
+    newArtist.genre = array[3]
+    newArtist.nationality = array[4]
+    newArtist.bio = array[5]
 
+  return artists.push(newArtist);
   }
+
+
+sigi = [21, 'Sigi', '1994-current day', 'Wed Design', 'American/German/Vietnamese', 'I took too long on this test... got stuck on the css, but I finished with an extra half hour!']
+
+addArtist(sigi);
+
+console.log(artists);
 
 
 
