@@ -1,0 +1,25 @@
+header{
+    display: flex;
+    height: 10vh;
+    .center();
+
+    nav{
+        width: 30%;
+        .center();
+
+        @media @mobile{
+            width:50%;
+        }
+
+        a{
+            width: 30%;
+            .customLink();
+        }
+
+        .navBreak{
+            font-size:1.5rem;
+            font-weight: 100;
+            color:lighten(black, 40%);
+        }
+    }
+}

@@ -201,6 +201,8 @@ const artists = [
     }
 ]
 
+
+
 // 🖌🖼 M V P 🖼🖌 //
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
@@ -208,10 +210,15 @@ const artists = [
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
 
+console.log(artists[0]);
+console.log(artists[2].bio);
+
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
+artists[9].name = 'Vincent Van Gogh';
+console.log(artists[9].name); 
 
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
@@ -223,8 +230,10 @@ const artists = [
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(id, name) {
-    /* code here */
+
+    return `The artist at index ${id} is ${name[id].name}`
   }
+  console.log(getArtistByIndex(2,artists));
   
   /**
 
@@ -237,20 +246,33 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(id, name) {
+    return name.splice(id, 1);
   }
+
+  removeArtist(1, artists);
+  console.log(artists[1]);
   
   /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(name){
+  const newArray =[]
 
-    /* Code here */
-
+  for (let i=0; i<= name.length -1; i++){
+    if(name[i].paintings > 100){
+      newArray.push(name[i]);
+    }
   }
+  return console.log(newArray);
+}
+
+  console.log(lotsOfArt(artists));
+
+
+
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -262,11 +284,25 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
+function addArtist(array){
+  let newArtist = {}
 
-    /* Code here */
+    newArtist.id = array[0]
+    newArtist.name = array[1]
+    newArtist.years = array[2]
+    newArtist.genre = array[3]
+    newArtist.nationality = array[4]
+    newArtist.bio = array[5]
 
+  return artists.push(newArtist);
   }
+
+
+sigi = [21, 'Sigi', '1994-current day', 'Wed Design', 'American/German/Vietnamese', 'I took too long on this test... got stuck on the css, but I finished with an extra half hour!']
+
+addArtist(sigi);
+
+console.log(artists);
 
 
 
@@ -276,11 +312,12 @@ function addArtist(/* Code here */){
 
 /* STRETCH 1: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
+// function get20s(data){
+//   for (let i=0; i<= data.length -1; i++){
+//     if (data[1].years 
+//   }
 
-    /* Code here */
-
-  }
+//   }
 
 /* STRETCH 2: Programtically console.log HTML element structure 
 
