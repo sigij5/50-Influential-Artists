@@ -3,11 +3,14 @@
   justify-content: center;
   align-items: center;
 }
-.artistLink {
+.customLink {
   text-decoration: none;
-  color: black;
-  font-size: 2rem;
+  color: #4d4d4d;
+  font-size: 1.5rem;
   text-align: center;
+}
+.customFont {
+  font-family: 'Raleway', sans-serif;
 }
 html,
 body,
@@ -96,4 +99,131 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #333333;
+  padding: 0% 8%;
+}
+@media (max-width:500px) {
+  body {
+    padding: 0%;
+  }
+}
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width:500px) {
+  header nav {
+    width: 50%;
+  }
+}
+header nav a {
+  width: 30%;
+  text-decoration: none;
+  color: #4d4d4d;
+  font-size: 1.5rem;
+  text-align: center;
+}
+header nav .navBreak {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #666666;
+}
+.title-container {
+  background-image: url("../assets/home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+@media (max-width:500px) {
+  .title-container {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.title-container h1 {
+  font-size: 3rem;
+  color: white;
+}
+.title-container button {
+  width: 15%;
+  background-color: white;
+  font-size: 1.5rem;
+  border-radius: 10%;
+  color: #4d4d4d;
+  font-weight: 100;
+  margin-top: 1%;
+}
+@media (max-width:500px) {
+  .title-container button {
+    width: 30%;
+    background-color: white;
+    font-size: 1.5rem;
+    border-radius: 10%;
+    color: #4d4d4d;
+  }
+}
+.artists-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width:500px) {
+  .artists-container {
+    flex-direction: column;
+  }
+}
+.artists-container .artist {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width:500px) {
+  .artists-container .artist {
+    width: 100%;
+    padding: 0% 15% 10% 15%;
+  }
+}
+.artists-container .artist .artist-image {
+  display: flex;
+  max-width: 100%;
+  border-radius: 10%;
+  overflow: hidden;
+  margin: 5%;
+}
+.artists-container .artist .artist-image img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+.artists-container .artist .bio {
+  width: 100%;
+  text-align: center;
+}
+.artists-container .artist a {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  text-decoration: none;
+  color: #4d4d4d;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2%;
 }

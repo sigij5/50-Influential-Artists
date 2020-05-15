@@ -1,0 +1,83 @@
+.title-container{
+    background-image: url("../assets/home.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    flex-direction: column;
+    text-align: center;
+    .center();
+    height:60vh;
+
+    @media @mobile{
+        height:50vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    h1{
+        font-size: 3rem;
+        color:white;
+    }
+    button{
+        .customButton(15%, white);
+        font-weight: 100;
+        margin-top: 1%;
+
+        @media @mobile{
+            .customButton(30%,white);
+        }
+    }
+
+
+}
+
+.artists-container{
+    display: flex;
+    justify-content: space-evenly;
+
+    @media @mobile{
+        flex-direction: column;
+    }
+
+    .artist{
+        width:40%;
+        display: flex;
+        flex-direction: column;
+
+        @media @mobile{
+            width:100%;
+            padding:0% 15% 10% 15%;
+        }
+
+        .artist-image{
+            display: flex;
+            max-width:100%;
+            border-radius: 10%;
+            overflow: hidden;
+            margin: 5%;
+            
+
+            img{
+                object-fit: contain;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .bio{
+            width:100%;
+            text-align: center;
+        }
+
+        a{
+            display: flex;
+            max-width:100%;
+            justify-content: center;
+            .customLink();
+            margin:2%;
+        }
+    }
+
+}
+
